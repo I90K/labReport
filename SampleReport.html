@@ -1,0 +1,189 @@
+<html>
+      <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Lab Report</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Samples.html">Samples</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="SampleReportForm.html">New Sample Submission Form</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Department.html">Departments</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Users.html">All Users</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+  <body style="background-color: #c7bcbc98;">
+    <div class="container">
+      <dic class="Toggle">
+        <button type="button" class="btn btn-outline-dark" onclick="show('summary')" id="summaryB">Summary</button>
+        <button type="button" class="btn btn-outline-dark" onclick="show('tests')" id="testB">Tests</button>
+      </dic>
+      <div id="summary">
+        <div class="row">
+          <div class="col-sm">
+            <h1>Section A</h1>
+            <hr>
+            <p>
+              <i>Owners Name:</i> DYS Kepayan<br>
+              <i>Address:</i> Unit Pemeriksaan Veterinar Kepayan
+            </p>
+            <table class="table-bordered" style="width: 100%;">
+              <tr>
+                <td><i>No.Tel:</i>016-666 6666</td>
+                <td><i>No.Fax:</i>1234567</td>
+              </tr>
+              <tr>
+                <td><i>E-Mail:</i>email@Email.com</td>
+                <td><i>RFID:</i>1234</td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-sm">
+            <h2>(For Lab Use Only)</h2>
+            <hr>
+            <p><i>Lab Reference No:</i>1234<br>
+              <i>Date Receive:</i>12/12/2004<br>
+              <i>Condition Of Sample:</i><br>
+              <i>Received & Checked By:</i><br>
+              <i>Section:</i></p>
+            <p><i>Payment:</i> Rm*** <i>Receipt No:</i><a>111</a></p>
+          </div>
+        </div>
+        <div style="border-top: 1px solid black">
+            <h1>Section B</h1>
+            <hr>
+            <p><i>Sender's Name: </i><br><i>Address: </i><br><i>No.Tel: </i></p>
+        </div>
+        <div>
+          <p><i>Types of species: <!--species--></i><br><i>Types of animal feed: <!--animal feed--></i><br><i>Types of dairy: <!--dairy--></i></p>
+        </div>
+        <i>Sample Particulars:</i>
+        <table class="table table-striped table-bordered table-hover table-condensed">
+          <tr><th>No</th><th>Sample Name / Identification Tag</th><th>Sample Type / Brand</th><th>Quantity</th><th>Remarks</th></tr>
+          <tr><td>1.</td><td>Honey Clucker Frank</td><td>Wise Choice</td><td>340 grams</td><td></td></tr>
+        </table>
+      </div>
+      <div id="tests" style="display:none;">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Test</th>
+              <th scope="col">Report</th>
+              <th scope="col">Done by</th>
+              <th scope="col">Date completed</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td></td><th>Food Microbiology</th></tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>Total Plate Count</td>
+              <td><a href="...">labReport.png</a></td>
+              <td>Mark</td>
+              <td>1/1/2019</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Coliform Count</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button class="btn btn-outline-success">Submit Test Report</button></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>E.coli Count</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button class="btn btn-outline-success">Submit Test Report</button></td>
+            </tr>
+            <tr><td></td><th>Animal Feed Analysis</th><td></td><td></td><td></td></tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>Moisture(%)</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><button class="btn btn-outline-success">Submit Test Report</button></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Total Ash(%)</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>  
+  </body>
+  <style>
+    .container{
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: whitesmoke;
+      width:90%;
+      padding: 10px;
+      margin: auto;
+      margin-top: 20px;
+      max-width: none;
+    }
+    h1{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    i{
+      font-family: sans-serif;
+      font-size: 18px;
+    }
+    .Toggle{
+      width: 100%;
+      text-align: center;
+    }
+    .Toggle button{
+      width: 49%;
+      display: inline-block;
+    }
+  </style>
+  <script>
+    function show(arg) {
+    document.getElementById("summary").style.display="none";
+    document.getElementById("tests").style.display="none";
+    document.getElementById(arg).style.display = "block";
+  }
+  </script>
+</html>

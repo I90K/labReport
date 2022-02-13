@@ -1,0 +1,106 @@
+<?php
+        include("meta.html");
+?><!DOCTYPE html>
+<html>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            background-color: #bfbfbf;
+        }
+        .login{
+            width: 400px;
+            border-radius: 10px;
+            padding: 10px 10px;
+            background-color: #ffffff;
+            box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)
+        }
+        .login h2{
+            text-align: center;
+            color: #5b6574;
+            font-size: 30px;
+            padding: 20px 0 20px 0;
+            border-bottom: 1px solid #dee0e4;
+        }
+        .input-container {
+            display: -ms-flexbox; /* IE10 */
+            display: flex;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .icon {
+            align-self: center;
+            font-size: 30px;
+            height: 50px;
+            width: 50px;
+            padding-top: 10px;
+            margin-bottom: 20px;
+            background: grey;
+            color: whitesmoke;
+            border: 1px solid #dee0e4;
+            border-right: 0px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .login input[type="password"], .login input[type="text"] {
+            align-self: center;
+            width: 310px;
+            height: 50px;
+            border: 1px solid #dee0e4;
+            margin-bottom: 20px;
+            padding: 0 15px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+    </style>
+    <head>
+        <title>Lab Report</title>
+    </head>
+    <body>
+        <form class="login" method="post" action="verify.php">
+            <h2>Register User</h2><br>
+            <div class="input-container"><i class="fa fa-user icon"></i><input class="input-field" type="text" placeholder="New Username" id="username"></div>
+            <div class="input-container"><i class="fa fa-lock icon"></i><input class="input-field" type="password" placeholder="New Password" id="password"></div>
+            <div class="input-container"><i class="fas fa-user-tie icon"></i><input class="input-field" type="text" placeholder="Admin Username" id="AdminUsername"></div>
+            <div class="input-container"><i class="fas fa-user-lock icon"></i><input class="input-field" type="password" placeholder="Admin Password" id="AdminPassword"></div>
+            <button type="button" class="btn btn-success btn-lg btn-block" onclick="send()">Register</button>
+            <button type="button" class="btn btn-link btn-lg btn-block" onclick='location.href="./index.php"''>Log In</button>
+        </form>
+    </body>
+    <script>
+        function send()
+        {
+            $.ajax({
+                async: true,
+                type: "POST",
+                url: "VerifyProcesses.php",
+                data:{
+                    USER: $("#username").val(),
+                    PASS: $("#password").val(),
+
+
+                    TYPE: "Register"
+                },
+                success:function(r)
+                {
+                    if(r=='ok')
+                    {
+                        window.location.replace("agent.php");
+                    }
+                    else
+                    {
+                        alert(r);
+                    }
+                }
+            });
+        }
+    </script>
+</html>
